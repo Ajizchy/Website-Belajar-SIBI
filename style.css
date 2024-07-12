@@ -1,0 +1,439 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #F6EEC9;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    float: right;
+}
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+    position: sticky;
+    top: 0;
+    background: #EE4E4E;
+    z-index: 1000;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 50px; /* Menyesuaikan jarak atas section logo */
+}
+
+#logo .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo .logo-img {
+    width: 55%; 
+    height: auto; 
+}
+
+#logo .deskripsi {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: -50px; /* Menyesuaikan posisi vertikal deskripsi */
+}
+
+a.tombol {
+    background: #ED9455;
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #FF7D29;
+    text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white,
+        -2px -2px 0 white,  
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+    width: 100%;
+}
+
+a.tombol:hover {
+    background: #FFBF78;
+    text-decoration: none;
+}
+
+.beranda-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.deskripsi {
+    flex: 1;
+    padding-right: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.beranda-img {
+    width: 45%; 
+    height: auto; 
+    display: block; 
+    margin-top: -20px; /* Mengatur gambar lebih ke atas */
+}
+
+.perbedaan-container {
+    margin-top: 40px; 
+}
+
+.mulai {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.tombol-mulai{
+    text-align: center;
+}
+.mulai a.tombol{
+    background: #ED9455;
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+    width: 200px;
+}
+.mulai a.tombol:hover {
+    background: #FFBF78;
+    text-decoration: none;
+}
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #FF7D29;
+    text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white,
+        -2px -2px 0 white,  
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #000; /* Warna border hitam */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #95D2B3;
+    color: black;
+}
+
+tr {
+    background-color: #D8EFD3;
+    color: black;
+}
+
+.materi h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.materi-menu {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1100px; 
+}
+
+.materi-menu img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.kuis h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px; 
+}
+.kuis-mudah {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.kuis-mudah a.tombol {
+    background: #81A263;
+    border-radius: 20px;
+    padding: 15px 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+}
+.kuis-mudah a.tombol:hover{
+    background: #ADD899;
+    text-decoration: none;
+}
+.kuis-sedang {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.kuis-sedang a.tombol {
+    background: #E0A75E;
+    border-radius: 20px;
+    padding: 15px 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+}
+.kuis-sedang a.tombol:hover{
+    background: #F9D689;
+    text-decoration: none;
+}
+.kuis-sulit {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.kuis-sulit a.tombol {
+    background: #973131;
+    border-radius: 20px;
+    padding: 15px 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+}
+.kuis-sulit a.tombol:hover{
+    background: #E88D67;
+    text-decoration: none;
+}
+.tentang-website h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px; 
+}
+.question-block {
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #d1e7fd;
+}
+
+.answers-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-answers {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#abjad_angka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+#ucapan_salam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+#Kalimat_tanya {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+#imbuhan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+#anggota_keluarga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+#kegiatan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.answers-container .show-answers {
+    background: #ED9455;
+    border-radius: 20px;
+    padding: 15px 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.answers-container .show-answers:hover { 
+    background: #FFBF78;
+    text-decoration: none;
+}
+button {
+    background: #ED9455;
+    border-radius: 20px;
+    padding: 15px 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 5px solid white;
+    display: inline-block;
+    margin-top: 20px; 
+}
+button:hover {
+    background: #FFBF78;
+    text-decoration: none;
+}
+button.option.selected {
+    background-color: #973131;
+    color: white; /* Warna teks putih */
+    border: 5px solid white;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color:  #973131;
+    text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white,
+        -2px -2px 0 white,  
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}

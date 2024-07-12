@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuis-mudah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href='#logo'>SIBI</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="menu materi.html">Materi</a></li>
+                    <li><a href="kuis.html">Kuis</a></li>
+                    <li><a href="tentang website.html">Tentang Website</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Jawaban Anda</h1>
+    <div id="answers-container"></div>
+    <h2 id="score"></h2>
+    <button onclick="goBack()">Kembali ke Beranda</button>
+
+    <script>
+        const SIBI_QUIZ_SEDANG = [
+            {
+                question: "1. Kalimat apa ini?",
+                answers: ['Siapa dia', 'Siapa ini', 'Siapa kamu', 'Siapa itu'],
+            },
+            {
+                question: "2. Kalimat apa ini?",
+                answers: ['Belajar', 'Mengajar', 'Diajar', 'Pelajar'],
+            },
+            {
+                question: "3. Membentuk kata apa ini?",
+                answers: ['Dia Makan', 'Saya Masak', 'Saya Makan', 'Dia Makan'],
+            },
+            {
+                question: "4. Membentuk kata apa ini?",
+                answers: ['Ayah saya membaca', 'Kakek saya membaca', 'Ayah saya menulis', 'Kakek saya menulis'],
+            },
+            {
+                question: "5. Membentuk kata apa ini?",
+                answers: ['ibu membaca', 'istri memasak', 'ibu memasak', 'istri membaca'],
+            }
+        ];
+
+        const CORRECT_ANSWER_SEDANG = [3, 0, 2, 0, 2];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const answers = JSON.parse(localStorage.getItem('quizResults'));
+            const score = calculateScore(answers);
+            displayAnswers(answers);
+            document.getElementById('score').innerText = `Skor Anda: ${score}/100`;
+        });
+
+        function calculateScore(answers) {
+            let score = 0;
+            answers.forEach((answer, index) => {
+                if (answer === CORRECT_ANSWER_SEDANG[index]) {
+                    score+=20;
+                }
+            });
+            return score;
+        }
+
+        function displayAnswers(answers) {
+            const answersContainer = document.getElementById('answers-container');
+            answers.forEach((answer, index) => {
+                const questionElem = document.createElement('p');
+                questionElem.innerHTML = `<strong>${SIBI_QUIZ_SEDANG[index].question}</strong>`;
+                answersContainer.appendChild(questionElem);
+
+                const selectedAnswerElem = document.createElement('p');
+                selectedAnswerElem.innerHTML = `Jawaban Anda: ${SIBI_QUIZ_SEDANG[index].answers[answer]} ${answer === CORRECT_ANSWER_SEDANG[index] ? '(Benar)' : '(Salah)'} - Jawaban yang benar: ${SIBI_QUIZ_SEDANG[index].answers[CORRECT_ANSWER_SEDANG[index]]}`;
+                answersContainer.appendChild(selectedAnswerElem);
+            });
+        }
+
+        function goBack() {
+            window.location.href = "beranda.html";
+        }
+    </script>
+    </body>
+    </html>
